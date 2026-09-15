@@ -929,6 +929,10 @@ h3 { letter-spacing: -.025em; }
 .interior-card:nth-child(2) > span { background: linear-gradient(145deg, #059efa, #0ac9e0); }
 .interior-card:nth-child(3) > span { background: linear-gradient(145deg, #0ac9e0, #14d1b2); }
 .interior-card:nth-child(4) > span { background: linear-gradient(145deg, #14d1b2, #1ac273); }
+.interior-card:nth-child(5) > span { background: linear-gradient(145deg, #7345ed, #9565f0); }
+.interior-card:nth-child(6) > span { background: linear-gradient(145deg, #f04073, #f56a88); }
+.interior-card:nth-child(7) > span { background: linear-gradient(145deg, #fa941a, #ffb23d); }
+.interior-card:nth-child(8) > span { background: linear-gradient(145deg, #091a4f, #0a63f5); }
 .interior-card h2 { margin: 72px 0 16px; font-size: clamp(1.5rem, 2.5vw, 2.35rem); font-weight: 650; line-height: 1.08; letter-spacing: -.045em; }
 .interior-card p { max-width: 520px; margin-bottom: 0; color: #4f5e7a; }
 .interior-faq-list { max-width: 900px; margin-inline: auto; }
@@ -937,12 +941,54 @@ h3 { letter-spacing: -.025em; }
 .compact-availability h2 { font-size: clamp(2.1rem, 3.6vw, 3.35rem); }
 .compact-availability .button-disabled { cursor: pointer; }
 
+.privacy-assurance {
+  position: relative;
+  padding: 140px 0;
+  overflow: hidden;
+  color: white;
+  background:
+    radial-gradient(circle at 88% 18%, rgba(10,201,224,.22), transparent 28%),
+    radial-gradient(circle at 8% 90%, rgba(20,209,178,.14), transparent 27%),
+    linear-gradient(145deg, #07153d, #091a4f 68%, #0a326f);
+}
+.privacy-assurance::after {
+  content: "";
+  position: absolute;
+  right: -160px;
+  bottom: -300px;
+  width: 680px;
+  height: 680px;
+  border: 1px solid rgba(255,255,255,.12);
+  border-radius: 50%;
+}
+.privacy-assurance-grid { position: relative; z-index: 2; display: grid; grid-template-columns: 1fr 1fr; gap: 100px; align-items: center; }
+.privacy-assurance h2 { max-width: 640px; }
+.privacy-assurance-copy > p:not(.eyebrow) { max-width: 600px; color: #bdcbe1; font-size: 1.08rem; }
+.privacy-link { margin-top: 28px; color: #091a4f; background: white; }
+.privacy-link span { margin-left: 9px; color: #0a63f5; }
+.privacy-principles { margin: 0; padding: 0; list-style: none; border-top: 1px solid rgba(255,255,255,.15); }
+.privacy-principles li { display: grid; grid-template-columns: 48px 1fr; gap: 16px; padding: 25px 0; align-items: start; border-bottom: 1px solid rgba(255,255,255,.15); }
+.privacy-principles span { color: #55dcf5; font-size: .65rem; font-weight: 800; }
+.privacy-principles strong { color: #f4f8ff; font-size: 1rem; font-weight: 580; line-height: 1.45; }
+
+.security-sources { padding: 125px 0 135px; background: linear-gradient(180deg, #edf7ff, #fbfdff); }
+.security-sources-grid { display: grid; grid-template-columns: .85fr 1.15fr; gap: 100px; align-items: start; }
+.security-sources h2 { font-size: clamp(2.35rem, 4vw, 3.8rem); }
+.security-sources-grid > div > p:last-child { max-width: 510px; color: #4f5e7a; }
+.security-sources ol { margin: 0; padding: 0; list-style: none; border-top: 1px solid #d7e8f6; }
+.security-sources li { display: grid; grid-template-columns: 44px 1fr; gap: 14px; padding: 20px 0; border-bottom: 1px solid #d7e8f6; }
+.security-sources li > span { color: #0a63f5; font-size: .62rem; font-weight: 800; }
+.security-sources a { display: flex; justify-content: space-between; gap: 20px; color: #263762; font-size: .88rem; font-weight: 620; }
+.security-sources a:hover { color: #0a63f5; }
+.security-sources a b { color: #0a63f5; font-weight: 600; }
+
 @media (max-width: 820px) {
   .interior-hero { min-height: auto; padding: 150px 0 90px; }
   .interior-hero-grid { grid-template-columns: 1fr; gap: 45px; }
   .interior-symbol { width: 210px; margin: 0; border-radius: 48px; }
   .interior-card-grid { grid-template-columns: 1fr; }
   .statement-band blockquote { padding: 30px; border-radius: 24px; }
+  .privacy-assurance-grid, .security-sources-grid { grid-template-columns: 1fr; gap: 60px; }
 }
 
 @media (max-width: 520px) {
@@ -953,6 +999,10 @@ h3 { letter-spacing: -.025em; }
   .interior-card { min-height: 260px; padding: 28px; border-radius: 24px; }
   .interior-card h2 { margin-top: 52px; }
   .compact-availability { padding: 40px 24px; }
+  .privacy-assurance { padding: 100px 0; }
+  .privacy-assurance-grid { gap: 48px; }
+  .security-sources { padding: 95px 0 105px; }
+  .security-sources-grid { gap: 42px; }
 }
 
 /* Editorial blog */

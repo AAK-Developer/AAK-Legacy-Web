@@ -51,6 +51,44 @@ const home = homeContent[page.locale];
         </div>
       </section>
 
+      {page.assurance && (
+        <section class="privacy-assurance">
+          <div class="container privacy-assurance-grid">
+            <div class="privacy-assurance-copy">
+              <p class="eyebrow eyebrow-light">{page.assurance.eyebrow}</p>
+              <h2>{page.assurance.title}</h2>
+              <p>{page.assurance.text}</p>
+              <a class="button privacy-link" href={pathFor(page.locale, "privacy")}>{page.assurance.linkLabel}<span aria-hidden="true">↗</span></a>
+            </div>
+            <ul class="privacy-principles">
+              {page.assurance.points.map((point, index) => (
+                <li><span>{String(index + 1).padStart(2, "0")}</span><strong>{point}</strong></li>
+              ))}
+            </ul>
+          </div>
+        </section>
+      )}
+
+      {page.sources && page.sourcesTitle && (
+        <section class="security-sources">
+          <div class="container security-sources-grid">
+            <div>
+              <p class="eyebrow">AAK · SECURITY</p>
+              <h2>{page.sourcesTitle}</h2>
+              {page.sourcesIntro && <p>{page.sourcesIntro}</p>}
+            </div>
+            <ol>
+              {page.sources.map((source, index) => (
+                <li>
+                  <span>{String(index + 1).padStart(2, "0")}</span>
+                  <a href={source.url} target="_blank" rel="noreferrer">{source.label}<b aria-hidden="true">↗</b></a>
+                </li>
+              ))}
+            </ol>
+          </div>
+        </section>
+      )}
+
       <section class="interior-cta">
         <div class="container availability-card compact-availability">
           <div><p class="eyebrow">{home.cta.label}</p><h2>{home.cta.title}</h2><p>{home.cta.text}</p></div>

@@ -259,8 +259,12 @@ const es: HomeContent = {
         text: "El primer dato persistido ya nace cifrado en el dispositivo."
       },
       {
-        title: "Conocimiento mínimo",
-        text: "AAK puede gestionar tu cuenta sin conocer aquello que has guardado."
+        title: "Claves bajo control del dispositivo",
+        text: "El material sensible se protege mediante las capacidades de seguridad de iOS y no se envía junto al contenido cifrado."
+      },
+      {
+        title: "Infraestructura sin el original legible",
+        text: "CloudKit y los servicios AAK conservan copias y paquetes ya cifrados; la protección no depende únicamente del servidor."
       },
       {
         title: "Decisión distribuida",
@@ -493,8 +497,12 @@ const en: HomeContent = {
         text: "The first persisted data is already encrypted on the device."
       },
       {
-        title: "Minimum knowledge",
-        text: "AAK can manage your account without knowing what you have stored."
+        title: "Keys remain under device control",
+        text: "Sensitive material is protected using iOS security capabilities and is not sent alongside encrypted content."
+      },
+      {
+        title: "Infrastructure without the readable original",
+        text: "CloudKit and AAK services keep already-encrypted copies and packages; protection does not depend on the server alone."
       },
       {
         title: "Distributed decisions",

@@ -57,7 +57,8 @@ export const fr: HomeContent = {
     text: "Le contenu est protégé avant son stockage. L’identité, le contenu et les décisions de remise restent séparés afin de limiter ce que chaque partie peut connaître ou contrôler.",
     items: [
       { title: "Chiffré dès l’origine", text: "La première donnée persistée est déjà chiffrée sur l’appareil." },
-      { title: "Connaissance minimale", text: "AAK peut gérer votre compte sans connaître ce que vous avez enregistré." },
+      { title: "Clés sous le contrôle de l’appareil", text: "Le matériel sensible est protégé par les capacités de sécurité d’iOS et n’est pas envoyé avec le contenu chiffré." },
+      { title: "Infrastructure sans l’original lisible", text: "CloudKit et les services AAK conservent des copies et paquets déjà chiffrés ; la protection ne dépend pas uniquement du serveur." },
       { title: "Décision distribuée", text: "L’activation ne dépend pas d’une seule personne et un gardien isolé ne peut pas l’imposer." }
     ]
   },
@@ -135,7 +136,8 @@ export const pt: HomeContent = {
     text: "O conteúdo é protegido antes de ser armazenado. A identidade, o conteúdo e as decisões de entrega mantêm-se separados para reduzir aquilo que cada parte pode conhecer ou controlar.",
     items: [
       { title: "Cifragem desde a origem", text: "O primeiro dado persistido já nasce cifrado no dispositivo." },
-      { title: "Conhecimento mínimo", text: "A AAK pode gerir a sua conta sem conhecer aquilo que guardou." },
+      { title: "Chaves sob controlo do dispositivo", text: "O material sensível é protegido pelas capacidades de segurança do iOS e não é enviado juntamente com o conteúdo cifrado." },
+      { title: "Infraestrutura sem o original legível", text: "O CloudKit e os serviços AAK guardam cópias e pacotes já cifrados; a proteção não depende apenas do servidor." },
       { title: "Decisão distribuída", text: "A ativação não depende de uma só pessoa e um guardião isolado não a pode forçar." }
     ]
   },
@@ -211,7 +213,8 @@ export const ca: HomeContent = {
     text: "El contingut es protegeix abans d’emmagatzemar-se. La identitat, el contingut i les decisions de lliurament es mantenen separats per reduir allò que cada part pot conèixer o controlar.",
     items: [
       { title: "Xifratge des de l’origen", text: "La primera dada persistent ja neix xifrada al dispositiu." },
-      { title: "Coneixement mínim", text: "AAK pot gestionar el teu compte sense conèixer allò que hi has desat." },
+      { title: "Claus sota el control del dispositiu", text: "El material sensible es protegeix amb les capacitats de seguretat d’iOS i no s’envia juntament amb el contingut xifrat." },
+      { title: "Infraestructura sense l’original llegible", text: "CloudKit i els serveis AAK conserven còpies i paquets ja xifrats; la protecció no depèn únicament del servidor." },
       { title: "Decisió distribuïda", text: "L’activació no depèn d’una sola persona i un custodi aïllat no la pot forçar." }
     ]
   },
