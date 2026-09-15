@@ -89,8 +89,20 @@ export interface HomeContent {
     label: string;
     title: string;
     text: string;
+    offerKicker: string;
+    offerTitle: string;
+    offerText: string;
+    formTitle: string;
+    emailLabel: string;
+    emailPlaceholder: string;
+    consentPrefix: string;
+    privacyLabel: string;
     button: string;
     note: string;
+    previewNote: string;
+    previewSuccess: string;
+    success: string;
+    error: string;
   };
   footer: {
     claim: string;
@@ -328,12 +340,23 @@ const es: HomeContent = {
     ]
   },
   cta: {
-    label: "Disponibilidad",
-    title: "AAK Legacy está en desarrollo para iPhone.",
-    text:
-      "La descarga se activará aquí cuando la aplicación esté disponible oficialmente en el App Store.",
-    button: "Próximamente en el App Store",
-    note: "Sin enlaces de descarga anticipados ni promesas de fecha."
+    label: "Lista privada",
+    title: "Llega antes. Conserva la ventaja para siempre.",
+    text: "Reserva tu plaza en AAK Legacy y sé de los primeros en conocer el lanzamiento para iPhone.",
+    offerKicker: "FOUNDING 100",
+    offerTitle: "25 % de descuento de por vida",
+    offerText: "Para los 100 primeros miembros que activen AAK Legacy.",
+    formTitle: "Reserva tu plaza",
+    emailLabel: "Correo electrónico",
+    emailPlaceholder: "tu@email.com",
+    consentPrefix: "Acepto recibir comunicaciones sobre AAK Legacy y he leído la",
+    privacyLabel: "política de privacidad",
+    button: "Reservar mi plaza",
+    note: "Sin tarjeta. Sin spam. Baja cuando quieras.",
+    previewNote: "Vista previa: todavía no se guardará tu email.",
+    previewSuccess: "La experiencia funciona. En esta preview no hemos guardado tu email.",
+    success: "Tu plaza está reservada. Te avisaremos cuando AAK Legacy esté listo.",
+    error: "No hemos podido reservar tu plaza. Inténtalo de nuevo en unos minutos."
   },
   footer: {
     claim: "Protege lo que importa. Déjalo preparado.",
@@ -566,11 +589,23 @@ const en: HomeContent = {
     ]
   },
   cta: {
-    label: "Availability",
-    title: "AAK Legacy is in development for iPhone.",
-    text: "Download will become available here when the app is officially released on the App Store.",
-    button: "Coming soon to the App Store",
-    note: "No early download links or unconfirmed launch dates."
+    label: "Private list",
+    title: "Join early. Keep the advantage for life.",
+    text: "Reserve your place in AAK Legacy and be among the first to hear about the iPhone launch.",
+    offerKicker: "FOUNDING 100",
+    offerTitle: "25% off for life",
+    offerText: "For the first 100 members who activate AAK Legacy.",
+    formTitle: "Reserve your place",
+    emailLabel: "Email address",
+    emailPlaceholder: "you@email.com",
+    consentPrefix: "I agree to receive communications about AAK Legacy and have read the",
+    privacyLabel: "privacy policy",
+    button: "Reserve my place",
+    note: "No card. No spam. Unsubscribe whenever you wish.",
+    previewNote: "Preview: your email will not be stored yet.",
+    previewSuccess: "The experience works. Your email was not stored in this preview.",
+    success: "Your place is reserved. We will let you know when AAK Legacy is ready.",
+    error: "We could not reserve your place. Please try again in a few minutes."
   },
   footer: {
     claim: "Protect what matters. Leave it prepared.",

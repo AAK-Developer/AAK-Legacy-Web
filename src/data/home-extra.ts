@@ -80,7 +80,14 @@ export const fr: HomeContent = {
       { category: "Sécurité et confidentialité", title: "Recovery Kit : la confidentialité implique aussi une responsabilité", summary: "Ce qu’il protège, pourquoi AAK n’en garde aucune copie et comment le conserver." }
     ]
   },
-  cta: { label: "Disponibilité", title: "AAK Legacy est en cours de développement pour iPhone.", text: "Le téléchargement sera activé ici lorsque l’application sera officiellement disponible sur l’App Store.", button: "Bientôt sur l’App Store", note: "Aucun lien anticipé ni date de lancement non confirmée." },
+  cta: {
+    label: "Liste privée", title: "Arrivez plus tôt. Gardez votre avantage à vie.", text: "Réservez votre place dans AAK Legacy et soyez parmi les premiers informés du lancement sur iPhone.",
+    offerKicker: "FOUNDING 100", offerTitle: "25 % de réduction à vie", offerText: "Pour les 100 premiers membres qui activeront AAK Legacy.",
+    formTitle: "Réservez votre place", emailLabel: "Adresse e-mail", emailPlaceholder: "vous@email.com",
+    consentPrefix: "J’accepte de recevoir des communications sur AAK Legacy et j’ai lu la", privacyLabel: "politique de confidentialité",
+    button: "Réserver ma place", note: "Sans carte. Sans spam. Désinscription à tout moment.", previewNote: "Aperçu : votre e-mail ne sera pas encore enregistré.",
+    previewSuccess: "L’expérience fonctionne. Votre e-mail n’a pas été enregistré dans cet aperçu.", success: "Votre place est réservée. Nous vous préviendrons lorsque AAK Legacy sera prêt.", error: "Nous n’avons pas pu réserver votre place. Réessayez dans quelques minutes."
+  },
   footer: { claim: "Protégez ce qui compte. Préparez-le.", product: "Produit", resources: "Ressources", legal: "Mentions légales", links: ["Comment ça marche", "Les 5 espaces", "Sécurité", "Blog", "Confidentialité", "Conditions", "Assistance"], transition: "Serenia Legacy est désormais AAK Legacy.", rights: "AAK Developer · Tous droits réservés." }
 };
 
@@ -159,7 +166,14 @@ export const pt: HomeContent = {
       { category: "Segurança e privacidade", title: "Recovery Kit: privacidade também significa responsabilidade", summary: "O que protege, porque a AAK não guarda uma cópia e como deve conservá-lo." }
     ]
   },
-  cta: { label: "Disponibilidade", title: "O AAK Legacy está em desenvolvimento para iPhone.", text: "A transferência será ativada aqui quando a aplicação estiver oficialmente disponível na App Store.", button: "Brevemente na App Store", note: "Sem ligações de transferência antecipadas nem datas não confirmadas." },
+  cta: {
+    label: "Lista privada", title: "Chegue primeiro. Mantenha a vantagem para sempre.", text: "Reserve o seu lugar no AAK Legacy e seja uma das primeiras pessoas a conhecer o lançamento para iPhone.",
+    offerKicker: "FOUNDING 100", offerTitle: "25 % de desconto vitalício", offerText: "Para os primeiros 100 membros que ativarem o AAK Legacy.",
+    formTitle: "Reserve o seu lugar", emailLabel: "Endereço de e-mail", emailPlaceholder: "voce@email.com",
+    consentPrefix: "Aceito receber comunicações sobre o AAK Legacy e li a", privacyLabel: "política de privacidade",
+    button: "Reservar o meu lugar", note: "Sem cartão. Sem spam. Cancele quando quiser.", previewNote: "Pré-visualização: o seu e-mail ainda não será guardado.",
+    previewSuccess: "A experiência funciona. O seu e-mail não foi guardado nesta pré-visualização.", success: "O seu lugar está reservado. Avisaremos quando o AAK Legacy estiver pronto.", error: "Não foi possível reservar o seu lugar. Tente novamente dentro de alguns minutos."
+  },
   footer: { claim: "Proteja o que importa. Deixe-o preparado.", product: "Produto", resources: "Recursos", legal: "Legal", links: ["Como funciona", "Os 5 espaços", "Segurança", "Blog", "Privacidade", "Termos", "Suporte"], transition: "Serenia Legacy é agora AAK Legacy.", rights: "AAK Developer · Todos os direitos reservados." }
 };
 
@@ -236,6 +250,13 @@ export const ca: HomeContent = {
       { category: "Seguretat i privacitat", title: "Recovery Kit: privacitat també significa responsabilitat", summary: "Què protegeix, per què AAK no en desa una còpia i com s’ha de conservar." }
     ]
   },
-  cta: { label: "Disponibilitat", title: "AAK Legacy està en desenvolupament per a iPhone.", text: "La descàrrega s’activarà aquí quan l’aplicació estigui disponible oficialment a l’App Store.", button: "Properament a l’App Store", note: "Sense enllaços de descàrrega anticipats ni promeses de data." },
+  cta: {
+    label: "Llista privada", title: "Arriba abans. Conserva l’avantatge per sempre.", text: "Reserva la teva plaça a AAK Legacy i sigues dels primers a conèixer el llançament per a iPhone.",
+    offerKicker: "FOUNDING 100", offerTitle: "25 % de descompte de per vida", offerText: "Per als 100 primers membres que activin AAK Legacy.",
+    formTitle: "Reserva la teva plaça", emailLabel: "Correu electrònic", emailPlaceholder: "tu@email.com",
+    consentPrefix: "Accepto rebre comunicacions sobre AAK Legacy i he llegit la", privacyLabel: "política de privacitat",
+    button: "Reservar la meva plaça", note: "Sense targeta. Sense correu brossa. Baixa quan vulguis.", previewNote: "Previsualització: encara no es desarà el teu correu.",
+    previewSuccess: "L’experiència funciona. En aquesta previsualització no hem desat el teu correu.", success: "La teva plaça està reservada. T’avisarem quan AAK Legacy estigui a punt.", error: "No hem pogut reservar la teva plaça. Torna-ho a provar d’aquí a uns minuts."
+  },
   footer: { claim: "Protegeix allò que importa. Deixa-ho preparat.", product: "Producte", resources: "Recursos", legal: "Legal", links: ["Com funciona", "Els 5 espais", "Seguretat", "Blog", "Privacitat", "Termes", "Suport"], transition: "Serenia Legacy ara és AAK Legacy.", rights: "AAK Developer · Tots els drets reservats." }
 };
