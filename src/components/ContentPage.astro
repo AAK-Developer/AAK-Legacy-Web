@@ -1,0 +1,65 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import SiteFooter from "@/components/SiteFooter.astro";
+import SiteHeader from "@/components/SiteHeader.astro";
+import { homeContent } from "@/data/home";
+import type { ContentPage as Page } from "@/data/pages";
+import { pathFor } from "@/data/site";
+
+interface Props { page: Page; }
+const { page } = Astro.props;
+const home = homeContent[page.locale];
+---
+
+<BaseLayout locale={page.locale} title={page.description} description={page.lead} canonicalPath={page.path} alternatePaths={page.alternatePaths}>
+  <div class="site-shell interior-shell">
+    <SiteHeader locale={page.locale} currentKey={page.key} alternatePaths={page.alternatePaths} />
+    <main id="main">
+      <section class={`interior-hero tone-${page.tone}`}>
+        <div class="interior-glow" aria-hidden="true"></div>
+        <div class="container interior-hero-grid">
+          <div>
+            <p class="eyebrow">{page.eyebrow}</p>
+            <h1>{page.title}</h1>
+            <p class="interior-lead">{page.lead}</p>
+          </div>
+          <div class="interior-symbol" aria-hidden="true">
+            <span>AAK</span><strong>{String(page.sections.length).padStart(2, "0")}</strong><i></i>
+          </div>
+        </div>
+      </section>
+
+      {page.statement && <section class="statement-band"><div class="container"><blockquote>{page.statement}</blockquote></div></section>}
+
+      <section class={`interior-content ${page.mode === "faq" ? "interior-faq" : ""}`}>
+        <div class="container">
+          {page.mode === "faq" ? (
+            <div class="faq-list interior-faq-list">
+              {page.sections.map((section, index) => (
+                <details open={index === 0}><summary>{section.title}<span aria-hidden="true"></span></summary><p>{section.text}</p></details>
+              ))}
+            </div>
+          ) : (
+            <div class="interior-card-grid">
+              {page.sections.map((section, index) => (
+                <article class="interior-card">
+                  <span>0{index + 1}</span><h2>{section.title}</h2><p>{section.text}</p>
+                </article>
+              ))}
+            </div>
+          )}
+        </div>
+      </section>
+
+      <section class="interior-cta">
+        <div class="container availability-card compact-availability">
+          <div><p class="eyebrow">{home.cta.label}</p><h2>{home.cta.title}</h2><p>{home.cta.text}</p></div>
+          <div class="availability-action">
+            <a class="button button-disabled" href={`${pathFor(page.locale, "home")}#availability`}>{home.cta.button}</a>
+          </div>
+        </div>
+      </section>
+    </main>
+    <SiteFooter locale={page.locale} />
+  </div>
+</BaseLayout>

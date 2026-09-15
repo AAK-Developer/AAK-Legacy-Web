@@ -1,0 +1,18 @@
+---
+import ContentPage from "@/components/ContentPage.astro";
+import { contentPageKeys, getContentPage } from "@/data/pages";
+import { pagePaths } from "@/data/site";
+import type { Locale } from "@/data/home";
+
+export function getStaticPaths() {
+  const translatedLocales: Locale[] = ["en", "fr", "pt", "ca"];
+  return translatedLocales.flatMap((locale) => contentPageKeys.map((key) => {
+    const withoutLocale = pagePaths[locale][key].replace(new RegExp(`^/${locale}/`), "").replace(/\/$/, "");
+    return { params: { locale, slug: withoutLocale }, props: { page: getContentPage(locale, key) } };
+  }));
+}
+
+const { page } = Astro.props;
+---
+
+<ContentPage page={page} />

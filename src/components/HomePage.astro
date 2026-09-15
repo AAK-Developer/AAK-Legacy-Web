@@ -1,0 +1,308 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import SiteFooter from "@/components/SiteFooter.astro";
+import SiteHeader from "@/components/SiteHeader.astro";
+import { articlePath, blogUi, featuredArticleSlugs } from "@/data/blog";
+import type { HomeContent } from "@/data/home";
+import { assetPath, pathFor } from "@/data/site";
+
+interface Props {
+  content: HomeContent;
+}
+
+const { content } = Astro.props;
+const spaces = content.spaces.items;
+const trustLabels = { es: "Principios de confianza", en: "Trust principles", fr: "Principes de confiance", pt: "Princípios de confiança", ca: "Principis de confiança" };
+const articleSlugs = featuredArticleSlugs[content.locale];
+---
+
+<BaseLayout
+  locale={content.locale}
+  title={content.title}
+  description={content.description}
+  canonicalPath={pathFor(content.locale, "home")}
+>
+  <div class="site-shell">
+    <SiteHeader locale={content.locale} currentKey="home" />
+
+    <main id="main">
+      <section class="hero section-dark">
+        <div class="hero-atmosphere" aria-hidden="true"></div>
+        <div class="container hero-grid">
+          <div class="hero-copy reveal">
+            <p class="eyebrow eyebrow-light">{content.hero.eyebrow}</p>
+            <h1>{content.hero.title}</h1>
+            <p class="hero-lead">{content.hero.lead}</p>
+            <div class="hero-actions">
+              <a class="button button-primary" href="#how">{content.hero.primary}</a>
+              <a class="button button-ghost" href="#spaces">{content.hero.secondary}</a>
+            </div>
+          </div>
+
+          <div class="legacy-visual" aria-label={content.hero.visualNote}>
+            <div class="visual-orbit orbit-one" aria-hidden="true"></div>
+            <div class="visual-orbit orbit-two" aria-hidden="true"></div>
+            <div class="legacy-core">
+              <div class="phone-topbar" aria-hidden="true">
+                <span>9:41</span><i></i><b>•••</b>
+              </div>
+              <p>{content.hero.visualLabel}</p>
+              <div class="logo-halo">
+                <img
+                  src={assetPath("/assets/brand/aak-legacy-icon-web.webp")}
+                  width="300"
+                  height="300"
+                  alt=""
+                  aria-hidden="true"
+                />
+              </div>
+              <strong>{content.hero.visualTitle}</strong>
+              <span>{content.hero.visualNote}</span>
+              <div class="phone-progress" aria-hidden="true">
+                <i><b></b></i><span>5 / 5</span>
+              </div>
+              <div class="phone-space-stack" aria-hidden="true">
+                {spaces.map((space, index) => (
+                  <div class={`phone-space phone-space-${index + 1}`}>
+                    <i></i><span>{space.title}</span><b>›</b>
+                  </div>
+                ))}
+              </div>
+            </div>
+            <ol class="space-orbit-list">
+              {spaces.map((space, index) => (
+                <li class={`orbit-space orbit-space-${index + 1}`}>
+                  <span>{space.number}</span>{space.title}
+                </li>
+              ))}
+            </ol>
+          </div>
+        </div>
+
+        <div class="container trust-strip" aria-label={trustLabels[content.locale]}>
+          {content.trust.map((item, index) => (
+            <div class="trust-item"><span>0{index + 1}</span><p>{item}</p></div>
+          ))}
+        </div>
+      </section>
+
+      <section class="purpose section-light">
+        <div class="container purpose-grid">
+          <div>
+            <p class="eyebrow">{content.purpose.kicker}</p>
+            <h2>{content.purpose.title}</h2>
+          </div>
+          <div class="purpose-copy">
+            <p>{content.purpose.text}</p>
+            <blockquote>{content.purpose.quote}</blockquote>
+          </div>
+        </div>
+      </section>
+
+      <section id="how" class="how section-mist">
+        <div class="container">
+          <div class="section-heading narrow">
+            <p class="eyebrow">{content.how.kicker}</p>
+            <h2>{content.how.title}</h2>
+            <p>{content.how.intro}</p>
+          </div>
+
+          <ol class="steps-grid">
+            {content.how.steps.map((step) => (
+              <li class="step-card">
+                <span class="step-number">{step.number}</span>
+                <h3>{step.title}</h3>
+                <p>{step.text}</p>
+              </li>
+            ))}
+          </ol>
+        </div>
+      </section>
+
+      <section id="spaces" class="spaces section-light">
+        <div class="container">
+          <div class="section-heading split-heading">
+            <div>
+              <p class="eyebrow">{content.spaces.kicker}</p>
+              <h2>{content.spaces.title}</h2>
+            </div>
+            <p>{content.spaces.intro}</p>
+          </div>
+
+          <div class="spaces-grid">
+            {spaces.map((space, index) => (
+              <article class={`space-card space-card-${index + 1}`}>
+                <div class="space-card-top">
+                  <span>{space.number}</span>
+                  <span class="space-line" aria-hidden="true"></span>
+                </div>
+                <h3>{space.title}</h3>
+                <p>{space.text}</p>
+                {space.details && (
+                  <ul>
+                    {space.details.map((detail) => <li>{detail}</li>)}
+                  </ul>
+                )}
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="people" class="people section-ink">
+        <div class="container">
+          <div class="section-heading split-heading heading-light">
+            <div>
+              <p class="eyebrow eyebrow-light">{content.people.kicker}</p>
+              <h2>{content.people.title}</h2>
+            </div>
+            <p>{content.people.intro}</p>
+          </div>
+
+          <div class="roles-grid">
+            <article class="role-card guardian-card">
+              <span class="role-mark" aria-hidden="true">G</span>
+              <p class="role-label">01</p>
+              <h3>{content.people.guardianTitle}</h3>
+              <p>{content.people.guardianText}</p>
+              <ul>
+                {content.people.guardianPoints.map((point) => <li>{point}</li>)}
+              </ul>
+            </article>
+
+            <div class="role-separator" aria-hidden="true">
+              <span></span>
+              <strong>≠</strong>
+              <span></span>
+            </div>
+
+            <article class="role-card recipient-card">
+              <span class="role-mark" aria-hidden="true">R</span>
+              <p class="role-label">02</p>
+              <h3>{content.people.recipientTitle}</h3>
+              <p>{content.people.recipientText}</p>
+              <ul>
+                {content.people.recipientPoints.map((point) => <li>{point}</li>)}
+              </ul>
+            </article>
+          </div>
+          <p class="roles-note">{content.people.note}</p>
+        </div>
+      </section>
+
+      <section class="recovery section-light">
+        <div class="container recovery-grid">
+          <div class="recovery-copy">
+            <p class="eyebrow">{content.recovery.kicker}</p>
+            <h2>{content.recovery.title}</h2>
+            <p>{content.recovery.text}</p>
+            <ul class="feature-list">
+              {content.recovery.points.map((point) => <li>{point}</li>)}
+            </ul>
+            <p class="recovery-warning"><span aria-hidden="true">!</span>{content.recovery.warning}</p>
+          </div>
+
+          <div class="kit-stage" aria-label={content.recovery.cardTitle}>
+            <div class="kit-shadow" aria-hidden="true"></div>
+            <article class="kit-card">
+              <div class="kit-card-head">
+                <img src={assetPath("/assets/brand/aak-legacy-logo-vertical.png")} width="106" height="117" alt="AAK Legacy" />
+                <span>256</span>
+              </div>
+              <div>
+                <p>AAK Legacy</p>
+                <h3>{content.recovery.cardTitle}</h3>
+                <small>{content.recovery.cardSubtitle}</small>
+              </div>
+              <div class="kit-seal" aria-hidden="true">
+                <i></i><i></i><i></i><i></i><i></i>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="security" class="security section-dark">
+        <div class="security-glow" aria-hidden="true"></div>
+        <div class="container security-grid">
+          <div class="security-main">
+            <p class="eyebrow eyebrow-light">{content.security.kicker}</p>
+            <h2>{content.security.title}</h2>
+            <blockquote>{content.security.statement}</blockquote>
+            <p>{content.security.text}</p>
+          </div>
+          <div class="security-list">
+            {content.security.items.map((item, index) => (
+              <article>
+                <span>0{index + 1}</span>
+                <div><h3>{item.title}</h3><p>{item.text}</p></div>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section class="faq section-light">
+        <div class="container faq-grid">
+          <div class="faq-heading">
+            <p class="eyebrow">{content.faq.kicker}</p>
+            <h2>{content.faq.title}</h2>
+          </div>
+          <div class="faq-list">
+            {content.faq.items.map((item, index) => (
+              <details open={index === 0}>
+                <summary>{item.question}<span aria-hidden="true"></span></summary>
+                <p>{item.answer}</p>
+              </details>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="blog" class="blog section-mist">
+        <div class="container">
+          <div class="section-heading split-heading">
+            <div>
+              <p class="eyebrow">{content.blog.kicker}</p>
+              <h2>{content.blog.title}</h2>
+            </div>
+            <p>{content.blog.intro}</p>
+          </div>
+          <div class="posts-grid">
+            {content.blog.posts.map((post, index) => (
+              <article class="post-card">
+                <a href={articlePath(content.locale, articleSlugs[index])}>
+                <div class={`post-art post-art-${index + 1}`} aria-hidden="true">
+                  <span>0{index + 1}</span>
+                </div>
+                <div class="post-content">
+                  <p class="post-category">{post.category}</p>
+                  <h3>{post.title}</h3>
+                  <p>{post.summary}</p>
+                  <span class="post-status">{blogUi[content.locale].read}<span aria-hidden="true"> →</span></span>
+                </div>
+                </a>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="availability" class="availability section-light">
+        <div class="container availability-card">
+          <div>
+            <p class="eyebrow">{content.cta.label}</p>
+            <h2>{content.cta.title}</h2>
+            <p>{content.cta.text}</p>
+          </div>
+          <div class="availability-action">
+            <span class="button button-disabled" aria-disabled="true">{content.cta.button}</span>
+            <small>{content.cta.note}</small>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <SiteFooter locale={content.locale} />
+  </div>
+</BaseLayout>

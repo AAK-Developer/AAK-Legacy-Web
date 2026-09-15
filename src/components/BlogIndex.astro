@@ -1,0 +1,54 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import SiteFooter from "@/components/SiteFooter.astro";
+import SiteHeader from "@/components/SiteHeader.astro";
+import { articlePath, blogUi, rssPath } from "@/data/blog";
+import { homeContent, type Locale } from "@/data/home";
+import { alternatesFor, pathFor } from "@/data/site";
+
+interface Props { locale: Locale; }
+const { locale } = Astro.props;
+const home = homeContent[locale];
+const ui = blogUi[locale];
+const articles = (await getCollection("blog", ({ data }) => data.locale === locale)).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+const alternates = alternatesFor("blog");
+const formatDate = new Intl.DateTimeFormat(locale === "pt" ? "pt-PT" : locale, { dateStyle: "long" });
+const readingTime = (body: string) => Math.max(1, Math.ceil(body.trim().split(/\s+/).length / 210));
+---
+
+<BaseLayout locale={locale} title={`${home.blog.title} — AAK Legacy`} description={home.blog.intro} canonicalPath={pathFor(locale, "blog")} alternatePaths={alternates}>
+  <div class="site-shell interior-shell">
+    <SiteHeader locale={locale} currentKey="blog" alternatePaths={alternates} />
+    <main id="main">
+      <section class="blog-hero">
+        <div class="container blog-hero-inner">
+          <div><p class="eyebrow">{home.blog.kicker}</p><h1>{home.blog.title}</h1><p>{home.blog.intro}</p></div>
+          <a class="rss-link" href={rssPath(locale)}><span aria-hidden="true">◉</span>{ui.rss}</a>
+        </div>
+      </section>
+      <section class="blog-index-content">
+        <div class="container">
+          <p class="eyebrow">{ui.latest}</p>
+          <div class="blog-list-grid">
+            {articles.map((article, index) => (
+              <article class={`blog-index-card ${index === 0 ? "featured-article" : ""}`}>
+                <a href={articlePath(locale, article.data.slug)}>
+                  <div class={`article-visual article-visual-${(index % 3) + 1}`}><span>0{index + 1}</span><i></i></div>
+                  <div class="article-card-copy">
+                    <p class="post-category">{article.data.category}</p>
+                    <h2>{article.data.title}</h2>
+                    <p>{article.data.description}</p>
+                    <div class="article-meta"><span>{formatDate.format(article.data.pubDate)}</span><span>{readingTime(article.body ?? "")} {ui.min}</span></div>
+                    <strong>{ui.read}<span aria-hidden="true">→</span></strong>
+                  </div>
+                </a>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+    </main>
+    <SiteFooter locale={locale} />
+  </div>
+</BaseLayout>

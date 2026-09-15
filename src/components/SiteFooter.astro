@@ -1,0 +1,40 @@
+---
+import { homeContent, type Locale } from "@/data/home";
+import { assetPath, localeCodes, locales, pathFor } from "@/data/site";
+
+interface Props { locale: Locale; }
+const { locale } = Astro.props;
+const content = homeContent[locale];
+---
+
+<footer class="site-footer">
+  <div class="container footer-top">
+    <div class="footer-brand">
+      <img src={assetPath("/assets/brand/aak-legacy-logo.png")} width="209" height="79" alt="AAK Legacy" />
+      <p>{content.footer.claim}</p>
+    </div>
+    <div class="footer-column">
+      <h2>{content.footer.product}</h2>
+      <a href={pathFor(locale, "how")}>{content.footer.links[0]}</a>
+      <a href={`${pathFor(locale, "home")}#spaces`}>{content.footer.links[1]}</a>
+      <a href={pathFor(locale, "security")}>{content.footer.links[2]}</a>
+    </div>
+    <div class="footer-column">
+      <h2>{content.footer.resources}</h2>
+      <a href={pathFor(locale, "blog")}>{content.footer.links[3]}</a>
+      <a href={pathFor(locale, "support")}>{content.footer.links[6]}</a>
+      <div class="footer-languages">
+        {locales.map((item) => <a href={pathFor(item, "home")} hreflang={localeCodes[item].hreflang}>{localeCodes[item].short}</a>)}
+      </div>
+    </div>
+    <div class="footer-column">
+      <h2>{content.footer.legal}</h2>
+      <a href={pathFor(locale, "privacy")}>{content.footer.links[4]}</a>
+      <a href={pathFor(locale, "terms")}>{content.footer.links[5]}</a>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <p>{content.footer.transition}</p>
+    <p>© 2026 {content.footer.rights}</p>
+  </div>
+</footer>

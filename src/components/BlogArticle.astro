@@ -1,0 +1,68 @@
+---
+import { render, type CollectionEntry } from "astro:content";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import SiteFooter from "@/components/SiteFooter.astro";
+import SiteHeader from "@/components/SiteHeader.astro";
+import { articlePath, blogUi } from "@/data/blog";
+import type { Locale } from "@/data/home";
+import { locales, pathFor } from "@/data/site";
+
+interface Props { article: CollectionEntry<"blog">; translations: Array<CollectionEntry<"blog">>; }
+const { article, translations } = Astro.props;
+const locale = article.data.locale as Locale;
+const ui = blogUi[locale];
+const { Content } = await render(article);
+const formatDate = new Intl.DateTimeFormat(locale === "pt" ? "pt-PT" : locale, { dateStyle: "long" });
+const alternates = Object.fromEntries(locales.map((item) => {
+  const translated = translations.find((entry) => entry.data.locale === item);
+  return [item, translated ? articlePath(item, translated.data.slug) : pathFor(item, "blog")];
+})) as Record<Locale, string>;
+const canonicalPath = articlePath(locale, article.data.slug);
+const wordCount = (article.body ?? "").trim().split(/\s+/).length;
+const structuredArticle = {
+  "@context": "https://schema.org", "@type": "Article", headline: article.data.title,
+  description: article.data.description, datePublished: article.data.pubDate.toISOString(),
+  dateModified: (article.data.updatedDate ?? article.data.pubDate).toISOString(),
+  inLanguage: locale === "pt" ? "pt-PT" : locale,
+  author: { "@type": "Organization", name: article.data.author },
+  publisher: { "@id": "https://aaklegacy.com/#organization" },
+  mainEntityOfPage: `https://aaklegacy.com${canonicalPath}`
+};
+---
+
+<BaseLayout
+  locale={locale}
+  title={`${article.data.title} — AAK Legacy`}
+  description={article.data.description}
+  canonicalPath={canonicalPath}
+  alternatePaths={alternates}
+  ogType="article"
+  publishedTime={article.data.pubDate.toISOString()}
+  modifiedTime={(article.data.updatedDate ?? article.data.pubDate).toISOString()}
+  articleTags={article.data.tags}
+  extraStructuredData={structuredArticle}
+>
+  <div class="site-shell interior-shell">
+    <SiteHeader locale={locale} currentKey="blog" alternatePaths={alternates} />
+    <main id="main">
+      <article>
+        <header class="article-hero">
+          <div class="container article-hero-inner">
+            <a class="article-back" href={pathFor(locale, "blog")}>← {ui.back}</a>
+            <p class="post-category">{article.data.category}</p>
+            <h1>{article.data.title}</h1>
+            <p class="article-description">{article.data.description}</p>
+            <div class="article-byline">
+              <span>{ui.by} <strong>{article.data.author}</strong></span>
+              <span>{ui.published} {formatDate.format(article.data.pubDate)}</span>
+              <span>{Math.max(1, Math.ceil(wordCount / 210))} {ui.min}</span>
+            </div>
+          </div>
+        </header>
+        <div class="article-cover" aria-hidden="true"><div><span>AAK LEGACY</span><i></i><b></b></div></div>
+        <div class="container article-body"><Content /></div>
+      </article>
+    </main>
+    <SiteFooter locale={locale} />
+  </div>
+</BaseLayout>

@@ -1,0 +1,53 @@
+---
+import { homeContent, type Locale } from "@/data/home";
+import { assetPath, chromeUi, localeCodes, locales, pathFor, type PageKey } from "@/data/site";
+
+interface Props {
+  locale: Locale;
+  currentKey?: PageKey;
+  alternatePaths?: Partial<Record<Locale, string>>;
+}
+
+const { locale, currentKey = "home", alternatePaths } = Astro.props;
+const content = homeContent[locale];
+const ui = chromeUi[locale];
+const home = pathFor(locale, "home");
+---
+
+<a class="skip-link" href="#main">{ui.skip}</a>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href={home} aria-label={ui.home}>
+      <img src={assetPath("/assets/brand/aak-legacy-logo.png")} width="174" height="66" alt="AAK Legacy" />
+    </a>
+    <nav class="desktop-nav" aria-label={ui.nav}>
+      <a href={pathFor(locale, "how")}>{content.nav.how}</a>
+      <a href={`${home}#spaces`}>{content.nav.spaces}</a>
+      <a href={pathFor(locale, "custodians")}>{content.nav.people}</a>
+      <a href={pathFor(locale, "security")}>{content.nav.security}</a>
+      <a href={pathFor(locale, "blog")}>{content.nav.blog}</a>
+    </nav>
+    <div class="header-actions">
+      <details class="language-switcher">
+        <summary aria-label="Language">{localeCodes[locale].short}</summary>
+        <div class="language-menu">
+          {locales.map((item) => (
+            <a href={alternatePaths?.[item] ?? pathFor(item, currentKey)} hreflang={localeCodes[item].hreflang} aria-current={item === locale ? "page" : undefined}>{localeCodes[item].short}</a>
+          ))}
+        </div>
+      </details>
+      <a class="header-cta" href={`${home}#availability`}>{content.nav.availability}</a>
+      <details class="mobile-nav">
+        <summary aria-label={content.nav.menu}><span></span><span></span><span></span></summary>
+        <nav aria-label={ui.mobile}>
+          <a href={pathFor(locale, "how")}>{content.nav.how}</a>
+          <a href={`${home}#spaces`}>{content.nav.spaces}</a>
+          <a href={pathFor(locale, "custodians")}>{content.nav.people}</a>
+          <a href={pathFor(locale, "security")}>{content.nav.security}</a>
+          <a href={pathFor(locale, "blog")}>{content.nav.blog}</a>
+          <a href={`${home}#availability`}>{content.nav.availability}</a>
+        </nav>
+      </details>
+    </div>
+  </div>
+</header>

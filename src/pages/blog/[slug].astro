@@ -1,0 +1,10 @@
+---
+import { getCollection } from "astro:content";
+import BlogArticle from "@/components/BlogArticle.astro";
+export async function getStaticPaths() {
+  const all = await getCollection("blog");
+  return all.filter((entry) => entry.data.locale === "es").map((article) => ({ params: { slug: article.data.slug }, props: { article, translations: all.filter((entry) => entry.data.translationKey === article.data.translationKey) } }));
+}
+const { article, translations } = Astro.props;
+---
+<BlogArticle article={article} translations={translations} />
