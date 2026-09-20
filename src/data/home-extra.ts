@@ -31,10 +31,10 @@ export const fr: HomeContent = {
     kicker: "Les 5 espaces", title: "Chaque chose à sa place.", intro: "Une structure simple pour organiser les aspects pratiques, numériques, patrimoniaux, émotionnels et ceux qui doivent rester particulièrement confidentiels.",
     items: [
       { number: "01", title: "Famille", text: "Les informations qui aident votre famille à savoir quoi faire et qui contacter.", details: ["Instructions essentielles", "Documents importants", "Contacts clés", "Messages et avis"] },
-      { number: "02", title: "Vie numérique", text: "Comptes, services, abonnements et contexte sur la vie qui existe aussi en ligne." },
-      { number: "03", title: "Patrimoine", text: "Références sur les biens, assurances, contrats et décisions qu’il convient de laisser faciles à retrouver." },
-      { number: "04", title: "Héritage émotionnel", text: "Messages, photographies, audio et vidéo pour préserver bien plus que des informations." },
-      { number: "05", title: "Privé", text: "Contenu particulièrement sensible, réservé aux seules personnes que vous désignez." }
+      { number: "02", title: "Vie numérique", text: "Comptes, services, abonnements et contexte sur la vie qui existe aussi en ligne.", details: ["Comptes et accès", "Abonnements actifs", "Services cloud", "Consignes de clôture"] },
+      { number: "03", title: "Patrimoine", text: "Références sur les biens, assurances, contrats et décisions qu’il convient de laisser faciles à retrouver.", details: ["Biens et propriétés", "Contrats d’assurance", "Contrats importants", "Décisions en attente"] },
+      { number: "04", title: "Héritage émotionnel", text: "Messages, photographies, audio et vidéo pour préserver bien plus que des informations.", details: ["Messages personnels", "Photographies", "Audio et vidéo", "Histoires à préserver"] },
+      { number: "05", title: "Privé", text: "Contenu particulièrement sensible, réservé aux seules personnes que vous désignez.", details: ["Informations sensibles", "Instructions réservées", "Documents confidentiels", "Accès très restreint"] }
     ]
   },
   people: {
@@ -121,10 +121,10 @@ export const pt: HomeContent = {
     kicker: "Os 5 espaços", title: "Cada coisa no seu lugar.", intro: "Uma estrutura simples para organizar o que é prático, digital, patrimonial, emocional e aquilo que deve permanecer especialmente reservado.",
     items: [
       { number: "01", title: "Familiar", text: "A informação que ajuda a sua família a compreender o que fazer e quem contactar.", details: ["Instruções essenciais", "Documentos importantes", "Contactos-chave", "Mensagens e avisos"] },
-      { number: "02", title: "Vida Digital", text: "Contas, serviços, subscrições e contexto sobre a vida que também existe online." },
-      { number: "03", title: "Património", text: "Referências sobre bens, seguros, contratos e decisões que convém deixar fáceis de localizar." },
-      { number: "04", title: "Legado Emocional", text: "Mensagens, fotografias, áudio e vídeo para preservar mais do que informação." },
-      { number: "05", title: "Privado", text: "Conteúdo especialmente sensível, reservado apenas às pessoas que determinar." }
+      { number: "02", title: "Vida Digital", text: "Contas, serviços, subscrições e contexto sobre a vida que também existe online.", details: ["Contas e acessos", "Subscrições ativas", "Serviços na nuvem", "Instruções de encerramento"] },
+      { number: "03", title: "Património", text: "Referências sobre bens, seguros, contratos e decisões que convém deixar fáceis de localizar.", details: ["Bens e propriedades", "Seguros e apólices", "Contratos relevantes", "Decisões pendentes"] },
+      { number: "04", title: "Legado Emocional", text: "Mensagens, fotografias, áudio e vídeo para preservar mais do que informação.", details: ["Mensagens pessoais", "Fotografias", "Áudio e vídeo", "Histórias a preservar"] },
+      { number: "05", title: "Privado", text: "Conteúdo especialmente sensível, reservado apenas às pessoas que determinar.", details: ["Informação sensível", "Instruções reservadas", "Documentos confidenciais", "Acesso muito restrito"] }
     ]
   },
   people: {
@@ -205,10 +205,10 @@ export const ca: HomeContent = {
     kicker: "Els 5 espais", title: "Cada cosa al seu lloc.", intro: "Una estructura senzilla per ordenar allò pràctic, digital, patrimonial, emocional i el que ha de romandre especialment reservat.",
     items: [
       { number: "01", title: "Familiar", text: "La informació que ajuda la teva família a entendre què ha de fer i amb qui ha de parlar.", details: ["Instruccions essencials", "Documents importants", "Contactes clau", "Missatges i avisos"] },
-      { number: "02", title: "Vida Digital", text: "Comptes, serveis, subscripcions i context sobre la vida que també existeix en línia." },
-      { number: "03", title: "Patrimoni", text: "Referències sobre béns, assegurances, contractes i decisions que convé deixar localitzades." },
-      { number: "04", title: "Llegat Emocional", text: "Missatges, fotografies, àudio i vídeo per conservar alguna cosa més que informació." },
-      { number: "05", title: "Privat", text: "Contingut especialment sensible, reservat només per a les persones que tu determinis." }
+      { number: "02", title: "Vida Digital", text: "Comptes, serveis, subscripcions i context sobre la vida que també existeix en línia.", details: ["Comptes i accessos", "Subscripcions actives", "Serveis al núvol", "Indicacions de tancament"] },
+      { number: "03", title: "Patrimoni", text: "Referències sobre béns, assegurances, contractes i decisions que convé deixar localitzades.", details: ["Béns i propietats", "Assegurances i pòlisses", "Contractes rellevants", "Decisions pendents"] },
+      { number: "04", title: "Llegat Emocional", text: "Missatges, fotografies, àudio i vídeo per conservar alguna cosa més que informació.", details: ["Missatges personals", "Fotografies", "Àudios i vídeos", "Històries per conservar"] },
+      { number: "05", title: "Privat", text: "Contingut especialment sensible, reservat només per a les persones que tu determinis.", details: ["Informació sensible", "Instruccions reservades", "Documents confidencials", "Accés molt restringit"] }
     ]
   },
   people: {

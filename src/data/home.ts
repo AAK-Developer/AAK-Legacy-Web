@@ -202,22 +202,46 @@ const es: HomeContent = {
       {
         number: "02",
         title: "Vida Digital",
-        text: "Cuentas, servicios, suscripciones y contexto sobre la vida que también existe online."
+        text: "Cuentas, servicios, suscripciones y contexto sobre la vida que también existe online.",
+        details: [
+          "Accesos y cuentas",
+          "Suscripciones activas",
+          "Servicios en la nube",
+          "Indicaciones de cierre"
+        ]
       },
       {
         number: "03",
         title: "Patrimonio",
-        text: "Referencias sobre bienes, seguros, contratos y decisiones que conviene dejar localizadas."
+        text: "Referencias sobre bienes, seguros, contratos y decisiones que conviene dejar localizadas.",
+        details: [
+          "Bienes y propiedades",
+          "Seguros y pólizas",
+          "Contratos relevantes",
+          "Decisiones pendientes"
+        ]
       },
       {
         number: "04",
         title: "Legado Emocional",
-        text: "Mensajes, fotografías, audio y vídeo para conservar algo más que información."
+        text: "Mensajes, fotografías, audio y vídeo para conservar algo más que información.",
+        details: [
+          "Mensajes personales",
+          "Fotografías",
+          "Audios y vídeos",
+          "Historias que conservar"
+        ]
       },
       {
         number: "05",
         title: "Privado",
-        text: "Contenido especialmente sensible, reservado solo para las personas que tú determines."
+        text: "Contenido especialmente sensible, reservado solo para las personas que tú determines.",
+        details: [
+          "Información sensible",
+          "Instrucciones reservadas",
+          "Documentos confidenciales",
+          "Acceso muy restringido"
+        ]
       }
     ]
   },
@@ -451,22 +475,26 @@ const en: HomeContent = {
       {
         number: "02",
         title: "Digital Life",
-        text: "Accounts, services, subscriptions, and context about the life that also exists online."
+        text: "Accounts, services, subscriptions, and context about the life that also exists online.",
+        details: ["Accounts and access", "Active subscriptions", "Cloud services", "Closure instructions"]
       },
       {
         number: "03",
         title: "Assets",
-        text: "References to property, insurance, contracts, and decisions worth leaving easy to locate."
+        text: "References to property, insurance, contracts, and decisions worth leaving easy to locate.",
+        details: ["Assets and property", "Insurance and policies", "Important contracts", "Pending decisions"]
       },
       {
         number: "04",
         title: "Emotional Legacy",
-        text: "Messages, photographs, audio, and video that preserve more than information."
+        text: "Messages, photographs, audio, and video that preserve more than information.",
+        details: ["Personal messages", "Photographs", "Audio and video", "Stories worth preserving"]
       },
       {
         number: "05",
         title: "Private",
-        text: "Especially sensitive content, reserved only for the people you decide."
+        text: "Especially sensitive content, reserved only for the people you decide.",
+        details: ["Sensitive information", "Private instructions", "Confidential documents", "Strictly limited access"]
       }
     ]
   },
