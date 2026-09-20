@@ -12,8 +12,6 @@ interface Props {
 
 const { content } = Astro.props;
 const spaces = content.spaces.items;
-const waitlistEndpoint = import.meta.env.PUBLIC_WAITLIST_ENDPOINT?.trim() ?? "";
-const isPrivatePreview = import.meta.env.PUBLIC_PREVIEW === "1";
 const trustLabels = { es: "Principios de confianza", en: "Trust principles", fr: "Principes de confiance", pt: "Princípios de confiança", ca: "Principis de confiança" };
 const articleSlugs = featuredArticleSlugs[content.locale];
 const localizedAppAsset = (filename: string) =>
@@ -304,96 +302,8 @@ const spaceScreens = [
         </div>
       </section>
 
-      <section id="availability" class="availability section-light">
-        <div class="container availability-card waitlist-card">
-          <div class="waitlist-story">
-            <p class="eyebrow">{content.cta.label}</p>
-            <h2>{content.cta.title}</h2>
-            <p>{content.cta.text}</p>
-          </div>
-          <form
-            class="waitlist-form"
-            method="post"
-            data-waitlist-form
-            data-endpoint={waitlistEndpoint}
-            data-preview-success={content.cta.previewSuccess}
-            data-success={content.cta.success}
-            data-error={content.cta.error}
-          >
-            <div class="waitlist-form-head">
-              <h3>{content.cta.formTitle}</h3>
-            </div>
-            <label class="waitlist-email">
-              <span>{content.cta.emailLabel}</span>
-              <input type="email" name="email" placeholder={content.cta.emailPlaceholder} autocomplete="email" inputmode="email" maxlength="254" required />
-            </label>
-            <label class="waitlist-honeypot" aria-hidden="true">
-              Company
-              <input type="text" name="company" tabindex="-1" autocomplete="off" />
-            </label>
-            <label class="waitlist-consent">
-              <input type="checkbox" name="consent" value="accepted" required />
-              <span>{content.cta.consentPrefix} <a href={pathFor(content.locale, "privacy")}>{content.cta.privacyLabel}</a>.</span>
-            </label>
-            <button class="button waitlist-submit" type="submit">{content.cta.button}<span aria-hidden="true">→</span></button>
-            <p class="waitlist-note">{content.cta.note}</p>
-            {isPrivatePreview && <p class="waitlist-preview-note">{content.cta.previewNote}</p>}
-            <p class="waitlist-status" role="status" aria-live="polite"></p>
-          </form>
-        </div>
-      </section>
     </main>
 
     <SiteFooter locale={content.locale} />
   </div>
 </BaseLayout>
-
-<script>
-  document.querySelectorAll<HTMLFormElement>("[data-waitlist-form]").forEach((form) => {
-    form.addEventListener("submit", async (event) => {
-      event.preventDefault();
-      if (!form.reportValidity()) return;
-
-      const status = form.querySelector<HTMLElement>(".waitlist-status");
-      const button = form.querySelector<HTMLButtonElement>("button[type='submit']");
-      const data = new FormData(form);
-      const endpoint = form.dataset.endpoint ?? "";
-      const message = (key: "previewSuccess" | "success" | "error") => form.dataset[key] ?? "";
-
-      if (data.get("company")) {
-        if (status) status.textContent = message("success");
-        form.reset();
-        return;
-      }
-
-      if (!endpoint) {
-        if (status) status.textContent = message("previewSuccess");
-        form.reset();
-        return;
-      }
-
-      if (button) button.disabled = true;
-      if (status) status.textContent = "";
-
-      try {
-        const response = await fetch(endpoint, {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({
-            email: data.get("email"),
-            consent: data.get("consent") === "accepted",
-            locale: document.documentElement.lang,
-            source: "aaklegacy-web"
-          })
-        });
-        if (!response.ok) throw new Error("waitlist_request_failed");
-        form.reset();
-        if (status) status.textContent = message("success");
-      } catch {
-        if (status) status.textContent = message("error");
-      } finally {
-        if (button) button.disabled = false;
-      }
-    });
-  });
-</script>

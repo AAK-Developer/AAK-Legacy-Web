@@ -36,7 +36,6 @@ const home = pathFor(locale, "home");
           ))}
         </div>
       </details>
-      <a class="header-cta" href={`${home}#availability`}>{content.nav.availability}</a>
       <details class="mobile-nav">
         <summary aria-label={content.nav.menu}><span></span><span></span><span></span></summary>
         <nav aria-label={ui.mobile}>
@@ -45,7 +44,6 @@ const home = pathFor(locale, "home");
           <a href={pathFor(locale, "custodians")}>{content.nav.people}</a>
           <a href={pathFor(locale, "security")}>{content.nav.security}</a>
           <a href={pathFor(locale, "blog")}>{content.nav.blog}</a>
-          <a href={`${home}#availability`}>{content.nav.availability}</a>
         </nav>
       </details>
     </div>

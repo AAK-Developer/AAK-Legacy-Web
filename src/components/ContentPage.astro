@@ -2,13 +2,11 @@
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import SiteFooter from "@/components/SiteFooter.astro";
 import SiteHeader from "@/components/SiteHeader.astro";
-import { homeContent } from "@/data/home";
 import type { ContentPage as Page } from "@/data/pages";
 import { pathFor } from "@/data/site";
 
 interface Props { page: Page; }
 const { page } = Astro.props;
-const home = homeContent[page.locale];
 ---
 
 <BaseLayout locale={page.locale} title={page.description} description={page.lead} canonicalPath={page.path} alternatePaths={page.alternatePaths}>
@@ -89,14 +87,6 @@ const home = homeContent[page.locale];
         </section>
       )}
 
-      <section class="interior-cta">
-        <div class="container availability-card compact-availability">
-          <div><p class="eyebrow">{home.cta.label}</p><h2>{home.cta.title}</h2><p>{home.cta.text}</p></div>
-          <div class="availability-action">
-            <a class="button button-disabled" href={`${pathFor(page.locale, "home")}#availability`}>{home.cta.button}</a>
-          </div>
-        </div>
-      </section>
     </main>
     <SiteFooter locale={page.locale} />
   </div>

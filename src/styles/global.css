@@ -91,7 +91,7 @@ h3 { line-height: 1.2; }
 .legacy-core > span { display: none; }
 .logo-halo { width: 45%; margin: 2px auto; filter: drop-shadow(0 10px 30px rgba(0,0,0,.28)); }
 .space-orbit-list { margin: 0; padding: 0; list-style: none; }
-.orbit-space { position: absolute; z-index: 4; display: flex; gap: 8px; min-width: 135px; padding: 9px 13px; align-items: center; color: #e9f5ff; border: 1px solid rgba(255,255,255,.15); border-radius: 999px; background: rgba(6, 23, 64, .76); backdrop-filter: blur(12px); box-shadow: 0 8px 24px rgba(0,0,0,.2); font-size: .69rem; font-weight: 700; }
+.orbit-space { position: absolute; z-index: 4; display: flex; gap: 8px; min-width: 135px; padding: 9px 13px; align-items: center; color: #e9f5ff; border: 1px solid rgba(255,255,255,.15); border-radius: 999px; background: rgba(6, 23, 64, .76); backdrop-filter: blur(12px); box-shadow: 0 8px 24px rgba(0,0,0,.2); font-size: .82rem; font-weight: 700; }
 .orbit-space span { color: #57d8ff; font-size: .57rem; }
 .orbit-space-1 { top: 3%; left: 17%; }
 .orbit-space-2 { top: 25%; right: -1%; }
