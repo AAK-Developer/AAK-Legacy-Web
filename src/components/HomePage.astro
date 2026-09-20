@@ -16,12 +16,14 @@ const waitlistEndpoint = import.meta.env.PUBLIC_WAITLIST_ENDPOINT?.trim() ?? "";
 const isPrivatePreview = import.meta.env.PUBLIC_PREVIEW === "1";
 const trustLabels = { es: "Principios de confianza", en: "Trust principles", fr: "Principes de confiance", pt: "Princípios de confiança", ca: "Principis de confiança" };
 const articleSlugs = featuredArticleSlugs[content.locale];
+const localizedAppAsset = (filename: string) =>
+  `/assets/app/${content.locale === "es" ? "" : `${content.locale}/`}${filename}`;
 const spaceScreens = [
-  "/assets/app/espacio-familiar.webp",
-  "/assets/app/vida-digital.webp",
-  "/assets/app/patrimonio.webp",
-  "/assets/app/legado-emocional.webp",
-  "/assets/app/privado.webp",
+  "espacio-familiar.webp",
+  "vida-digital.webp",
+  "patrimonio.webp",
+  "legado-emocional.webp",
+  "privado.webp",
 ];
 ---
 
@@ -54,7 +56,7 @@ const spaceScreens = [
             <div class="legacy-core">
               <img
                 class="hero-app-screen"
-                src={assetPath("/assets/app/aak-legacy-inicio.webp")}
+                src={assetPath(localizedAppAsset("aak-legacy-inicio.webp"))}
                 width="706"
                 height="1537"
                 alt={content.hero.visualNote}
@@ -129,7 +131,7 @@ const spaceScreens = [
                 <figure class={`product-screen product-screen-${index + 1}`}>
                   <div class="product-screen-frame">
                     <img
-                      src={assetPath(spaceScreens[index])}
+                      src={assetPath(localizedAppAsset(spaceScreens[index]))}
                       width="600"
                       height="1306"
                       alt={`${space.title} — AAK Legacy`}
