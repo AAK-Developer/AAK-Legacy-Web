@@ -725,7 +725,7 @@ h3 { letter-spacing: -.025em; }
   .orbit-space-2, .orbit-space-4 { animation: badgeFloat 6.5s ease-in-out infinite reverse; }
   @keyframes deviceFloat {
     0%, 100% { transform: translateX(-50%) rotate(2deg) translateY(0); }
-    50% { transform: translateX(-50%) rotate(.7deg) translateY(-9px); }
+    50% { transform: translateX(-50%) rotate(.7deg) translateY(-18px); }
   }
   @keyframes badgeFloat {
     0%, 100% { translate: 0 0; }
@@ -1111,7 +1111,7 @@ h3 { letter-spacing: -.025em; }
   max-width: 800px;
   margin-bottom: 28px;
   font-family: var(--serif);
-  font-size: clamp(3.6rem, 6.1vw, 5.85rem);
+  font-size: clamp(2.7rem, 4.575vw, 4.3875rem);
   font-weight: 700;
   line-height: .98;
   letter-spacing: -.03em;
@@ -1121,7 +1121,7 @@ h3 { letter-spacing: -.025em; }
 @media (max-width: 720px) {
   .hero-copy > .eyebrow {
     margin-bottom: 25px;
-    font-size: clamp(3.1rem, 14vw, 4.15rem);
+    font-size: clamp(2.325rem, 10.5vw, 3.1125rem);
     line-height: .98;
     letter-spacing: -.03em;
   }
