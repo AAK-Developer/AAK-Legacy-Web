@@ -310,11 +310,6 @@ const spaceScreens = [
             <p class="eyebrow">{content.cta.label}</p>
             <h2>{content.cta.title}</h2>
             <p>{content.cta.text}</p>
-            <div class="founding-offer" aria-label={content.cta.offerTitle}>
-              <span>{content.cta.offerKicker}</span>
-              <strong>{content.cta.offerTitle}</strong>
-              <small>{content.cta.offerText}</small>
-            </div>
           </div>
           <form
             class="waitlist-form"
@@ -326,7 +321,6 @@ const spaceScreens = [
             data-error={content.cta.error}
           >
             <div class="waitlist-form-head">
-              <span class="waitlist-form-mark" aria-hidden="true">100</span>
               <h3>{content.cta.formTitle}</h3>
             </div>
             <label class="waitlist-email">

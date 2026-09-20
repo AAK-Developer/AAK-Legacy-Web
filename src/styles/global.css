@@ -1146,7 +1146,7 @@ h3 { letter-spacing: -.025em; }
   }
 }
 
-/* Founding 100 waitlist */
+/* Private waitlist */
 .waitlist-card {
   position: relative;
   grid-template-columns: 1.04fr .96fr;
@@ -1171,20 +1171,6 @@ h3 { letter-spacing: -.025em; }
 .waitlist-story,
 .waitlist-form { position: relative; z-index: 1; }
 .waitlist-story > p:not(.eyebrow) { max-width: 620px; margin-bottom: 0; color: rgba(255,255,255,.86); font-size: 1.05rem; }
-.founding-offer {
-  display: grid;
-  margin-top: 36px;
-  padding: 24px 26px;
-  border: 1px solid rgba(255,255,255,.24);
-  border-radius: 22px;
-  background: rgba(4,22,68,.2);
-  box-shadow: inset 0 1px 0 rgba(255,255,255,.12);
-  backdrop-filter: blur(16px);
-}
-.founding-offer > span { margin-bottom: 9px; color: #9af5e3; font-size: .66rem; font-weight: 800; letter-spacing: .16em; }
-.founding-offer strong { color: white; font-size: clamp(1.45rem, 2.3vw, 2rem); line-height: 1.1; letter-spacing: -.035em; }
-.founding-offer small { margin-top: 8px; color: rgba(255,255,255,.75); font-size: .78rem; line-height: 1.5; }
-
 .waitlist-form {
   padding: 34px;
   color: #091a4f;
@@ -1196,7 +1182,6 @@ h3 { letter-spacing: -.025em; }
 }
 .waitlist-form-head { display: flex; margin-bottom: 26px; align-items: center; justify-content: space-between; gap: 20px; }
 .waitlist-form-head h3 { margin: 0; color: #091a4f; font-size: clamp(1.45rem, 2.2vw, 2rem); font-weight: 680; letter-spacing: -.04em; }
-.waitlist-form-mark { display: grid; width: 48px; height: 48px; flex: 0 0 auto; place-items: center; color: white; border-radius: 15px; background: linear-gradient(145deg, #0a63f5, #08bdd9); box-shadow: 0 10px 25px rgba(10,99,245,.25); font-size: .72rem; font-weight: 800; }
 .waitlist-email { display: grid; gap: 9px; }
 .waitlist-email > span { color: #344362; font-size: .72rem; font-weight: 700; }
 .waitlist-email input {
@@ -1237,7 +1222,6 @@ h3 { letter-spacing: -.025em; }
 @media (max-width: 520px) {
   .waitlist-card { width: calc(100% - 24px); padding: 42px 22px 24px; border-radius: 28px; }
   .waitlist-card h2 { font-size: clamp(2.3rem, 11.5vw, 3.2rem); }
-  .founding-offer { margin-top: 28px; padding: 21px; border-radius: 19px; }
   .waitlist-form { padding: 24px 18px 22px; border-radius: 22px; }
   .waitlist-form-head { align-items: flex-start; }
 }

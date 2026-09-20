@@ -81,8 +81,7 @@ export const fr: HomeContent = {
     ]
   },
   cta: {
-    label: "Liste privée", title: "Arrivez plus tôt. Gardez votre avantage à vie.", text: "Réservez votre place dans AAK Legacy et soyez parmi les premiers informés du lancement sur iPhone.",
-    offerKicker: "FOUNDING 100", offerTitle: "25 % de réduction à vie", offerText: "Pour les 100 premiers membres qui activeront AAK Legacy.",
+    label: "Liste privée", title: "Soyez parmi les premiers à découvrir AAK Legacy.", text: "Réservez votre place dans AAK Legacy et soyez parmi les premiers informés du lancement sur iPhone.",
     formTitle: "Réservez votre place", emailLabel: "Adresse e-mail", emailPlaceholder: "vous@email.com",
     consentPrefix: "J’accepte de recevoir des communications sur AAK Legacy et j’ai lu la", privacyLabel: "politique de confidentialité",
     button: "Réserver ma place", note: "Sans carte. Sans spam. Désinscription à tout moment.", previewNote: "Aperçu : votre e-mail ne sera pas encore enregistré.",
@@ -167,8 +166,7 @@ export const pt: HomeContent = {
     ]
   },
   cta: {
-    label: "Lista privada", title: "Chegue primeiro. Mantenha a vantagem para sempre.", text: "Reserve o seu lugar no AAK Legacy e seja uma das primeiras pessoas a conhecer o lançamento para iPhone.",
-    offerKicker: "FOUNDING 100", offerTitle: "25 % de desconto vitalício", offerText: "Para os primeiros 100 membros que ativarem o AAK Legacy.",
+    label: "Lista privada", title: "Seja uma das primeiras pessoas a descobrir o AAK Legacy.", text: "Reserve o seu lugar no AAK Legacy e seja uma das primeiras pessoas a conhecer o lançamento para iPhone.",
     formTitle: "Reserve o seu lugar", emailLabel: "Endereço de e-mail", emailPlaceholder: "voce@email.com",
     consentPrefix: "Aceito receber comunicações sobre o AAK Legacy e li a", privacyLabel: "política de privacidade",
     button: "Reservar o meu lugar", note: "Sem cartão. Sem spam. Cancele quando quiser.", previewNote: "Pré-visualização: o seu e-mail ainda não será guardado.",
@@ -251,8 +249,7 @@ export const ca: HomeContent = {
     ]
   },
   cta: {
-    label: "Llista privada", title: "Arriba abans. Conserva l’avantatge per sempre.", text: "Reserva la teva plaça a AAK Legacy i sigues dels primers a conèixer el llançament per a iPhone.",
-    offerKicker: "FOUNDING 100", offerTitle: "25 % de descompte de per vida", offerText: "Per als 100 primers membres que activin AAK Legacy.",
+    label: "Llista privada", title: "Sigues dels primers a descobrir AAK Legacy.", text: "Reserva la teva plaça a AAK Legacy i sigues dels primers a conèixer el llançament per a iPhone.",
     formTitle: "Reserva la teva plaça", emailLabel: "Correu electrònic", emailPlaceholder: "tu@email.com",
     consentPrefix: "Accepto rebre comunicacions sobre AAK Legacy i he llegit la", privacyLabel: "política de privacitat",
     button: "Reservar la meva plaça", note: "Sense targeta. Sense correu brossa. Baixa quan vulguis.", previewNote: "Previsualització: encara no es desarà el teu correu.",

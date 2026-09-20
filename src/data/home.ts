@@ -89,9 +89,6 @@ export interface HomeContent {
     label: string;
     title: string;
     text: string;
-    offerKicker: string;
-    offerTitle: string;
-    offerText: string;
     formTitle: string;
     emailLabel: string;
     emailPlaceholder: string;
@@ -365,11 +362,8 @@ const es: HomeContent = {
   },
   cta: {
     label: "Lista privada",
-    title: "Llega antes. Conserva la ventaja para siempre.",
+    title: "Sé de los primeros en descubrir AAK Legacy.",
     text: "Reserva tu plaza en AAK Legacy y sé de los primeros en conocer el lanzamiento para iPhone.",
-    offerKicker: "FOUNDING 100",
-    offerTitle: "25 % de descuento de por vida",
-    offerText: "Para los 100 primeros miembros que activen AAK Legacy.",
     formTitle: "Reserva tu plaza",
     emailLabel: "Correo electrónico",
     emailPlaceholder: "tu@email.com",
@@ -618,11 +612,8 @@ const en: HomeContent = {
   },
   cta: {
     label: "Private list",
-    title: "Join early. Keep the advantage for life.",
+    title: "Be among the first to discover AAK Legacy.",
     text: "Reserve your place in AAK Legacy and be among the first to hear about the iPhone launch.",
-    offerKicker: "FOUNDING 100",
-    offerTitle: "25% off for life",
-    offerText: "For the first 100 members who activate AAK Legacy.",
     formTitle: "Reserve your place",
     emailLabel: "Email address",
     emailPlaceholder: "you@email.com",
