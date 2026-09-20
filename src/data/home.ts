@@ -131,10 +131,10 @@ const es: HomeContent = {
     menu: "Abrir navegación"
   },
   hero: {
-    eyebrow: "Tu legado, preparado con calma",
-    title: "Lo importante no debería quedarse sin explicación.",
+    eyebrow: "Hay cosas que no deberían perderse nunca",
+    title: "Tus decisiones. Tus recuerdos. Y todo aquello que solo tú puedes explicar.",
     lead:
-      "AAK Legacy te ayuda a organizar documentos, instrucciones, recuerdos y decisiones; protegerlos con cifrado en tu dispositivo y dejarlos preparados para las personas que tú elijas.",
+      "AAK Legacy lo organiza y protege con cifrado en tu dispositivo, y lo deja preparado para las personas que tú elijas.",
     primary: "Descubrir cómo funciona",
     secondary: "Explorar los 5 espacios",
     visualLabel: "Un lugar para cada cosa",
@@ -385,10 +385,10 @@ const en: HomeContent = {
     menu: "Open navigation"
   },
   hero: {
-    eyebrow: "Your legacy, calmly prepared",
-    title: "What matters should never be left unexplained.",
+    eyebrow: "There are things that should never be lost",
+    title: "Your decisions. Your memories. And everything only you can explain.",
     lead:
-      "AAK Legacy helps you organize documents, instructions, memories, and decisions; protect them with encryption on your device, and keep them ready for the people you choose.",
+      "AAK Legacy organizes and protects it all with encryption on your device, leaving it prepared for the people you choose.",
     primary: "See how it works",
     secondary: "Explore the 5 spaces",
     visualLabel: "A place for everything",

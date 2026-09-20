@@ -7,9 +7,9 @@ export const fr: HomeContent = {
   description: "Organisez documents, instructions, souvenirs et décisions dans un Legacy chiffré, prêt pour les personnes que vous choisissez.",
   nav: { how: "Comment ça marche", spaces: "Les 5 espaces", people: "Personnes", security: "Sécurité", blog: "Blog", availability: "Disponibilité", menu: "Ouvrir la navigation" },
   hero: {
-    eyebrow: "Votre héritage, préparé sereinement",
-    title: "Ce qui compte ne devrait jamais rester sans explication.",
-    lead: "AAK Legacy vous aide à organiser documents, instructions, souvenirs et décisions, à les protéger par un chiffrement sur votre appareil et à les préparer pour les personnes que vous choisissez.",
+    eyebrow: "Il y a des choses qui ne devraient jamais se perdre",
+    title: "Vos décisions. Vos souvenirs. Et tout ce que vous seul pouvez expliquer.",
+    lead: "AAK Legacy organise et protège le tout grâce à un chiffrement sur votre appareil, puis le prépare pour les personnes que vous choisissez.",
     primary: "Découvrir comment ça marche", secondary: "Explorer les 5 espaces", visualLabel: "Une place pour chaque chose", visualTitle: "Votre Legacy", visualNote: "Cinq espaces. Une vision unique. Tout sous votre contrôle."
   },
   trust: ["Le contenu est chiffré dès l’origine", "AAK ne peut pas lire votre Legacy", "Aucun gardien ne décide seul", "Vous choisissez chaque destinataire"],
@@ -98,8 +98,8 @@ export const pt: HomeContent = {
   description: "Organize documentos, instruções, memórias e decisões num Legacy cifrado, preparado para as pessoas que escolher.",
   nav: { how: "Como funciona", spaces: "Os 5 espaços", people: "Pessoas", security: "Segurança", blog: "Blog", availability: "Disponibilidade", menu: "Abrir navegação" },
   hero: {
-    eyebrow: "O seu legado, preparado com serenidade", title: "O que importa não deve ficar sem explicação.",
-    lead: "O AAK Legacy ajuda-o a organizar documentos, instruções, memórias e decisões, a protegê-los com cifragem no seu dispositivo e a deixá-los preparados para as pessoas que escolher.",
+    eyebrow: "Há coisas que nunca se deveriam perder", title: "As suas decisões. As suas memórias. E tudo aquilo que só você pode explicar.",
+    lead: "O AAK Legacy organiza e protege tudo com cifragem no seu dispositivo, deixando-o preparado para as pessoas que escolher.",
     primary: "Descobrir como funciona", secondary: "Explorar os 5 espaços", visualLabel: "Um lugar para cada coisa", visualTitle: "O seu Legacy", visualNote: "Cinco espaços. Uma visão única. Tudo sob o seu controlo."
   },
   trust: ["O conteúdo nasce cifrado", "A AAK não pode ler o seu Legacy", "Nenhum guardião decide sozinho", "Escolhe cada destinatário"],
@@ -184,8 +184,8 @@ export const ca: HomeContent = {
   description: "Organitza documents, instruccions, records i decisions en un Legacy xifrat, preparat per a les persones que triïs.",
   nav: { how: "Com funciona", spaces: "Els 5 espais", people: "Persones", security: "Seguretat", blog: "Blog", availability: "Disponibilitat", menu: "Obre la navegació" },
   hero: {
-    eyebrow: "El teu llegat, preparat amb serenitat", title: "Allò que importa no hauria de quedar sense explicació.",
-    lead: "AAK Legacy t’ajuda a organitzar documents, instruccions, records i decisions, a protegir-los amb xifratge al teu dispositiu i a deixar-los preparats per a les persones que triïs.",
+    eyebrow: "Hi ha coses que no s’haurien de perdre mai", title: "Les teves decisions. Els teus records. I tot allò que només tu pots explicar.",
+    lead: "AAK Legacy ho organitza i ho protegeix amb xifratge al teu dispositiu, i ho deixa preparat per a les persones que tu triïs.",
     primary: "Descobreix com funciona", secondary: "Explora els 5 espais", visualLabel: "Un lloc per a cada cosa", visualTitle: "El teu Legacy", visualNote: "Cinc espais. Una sola visió. Tot sota el teu control."
   },
   trust: ["El contingut neix xifrat", "AAK no pot llegir el teu Legacy", "Cap custodi decideix sol", "Tu tries cada destinatari"],
