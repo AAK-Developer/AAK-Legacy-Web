@@ -551,9 +551,13 @@ h3 { letter-spacing: -.025em; }
 .step-card h3 { font-size: 1.08rem; font-weight: 650; }
 
 .space-card {
+  min-height: 240px;
+  padding: 32px;
   border-radius: 30px;
   box-shadow: 0 22px 60px rgba(41,77,130,.07);
 }
+.space-card-1 { min-height: 498px; }
+.space-card-4, .space-card-5 { min-height: 240px; }
 .space-card-2, .space-card-3, .space-card-4, .space-card-5 { border-top-width: 1px; }
 .space-card-2::after, .space-card-3::after, .space-card-4::after, .space-card-5::after {
   content: "";
@@ -569,7 +573,19 @@ h3 { letter-spacing: -.025em; }
 .space-card-3::after { background: #1ac273; box-shadow: 0 0 0 7px rgba(26,194,115,.11); }
 .space-card-4::after { background: #7345ed; box-shadow: 0 0 0 7px rgba(115,69,237,.10); }
 .space-card-5::after { background: #f04073; box-shadow: 0 0 0 7px rgba(240,64,115,.10); }
-.space-card h3 { font-weight: 650; letter-spacing: -.045em; }
+.space-card h3 {
+  margin-top: 52px;
+  font-size: clamp(2.3rem, 3.8vw, 3.9rem);
+  font-weight: 650;
+  letter-spacing: -.035em;
+}
+.space-card:not(.space-card-1) h3 {
+  margin-top: 38px;
+  font-size: clamp(1.95rem, 2.7vw, 2.65rem);
+}
+.space-card p { font-size: 1.02rem; line-height: 1.58; }
+.space-card ul { margin-top: 36px; }
+.space-card li { padding: 14px 0; font-size: .94rem; line-height: 1.4; }
 
 .people { background: linear-gradient(180deg, #edf7ff, #f3fbfb); }
 .role-card { border-radius: 30px; box-shadow: 0 22px 60px rgba(41,77,130,.07); }
@@ -609,6 +625,10 @@ h3 { letter-spacing: -.025em; }
   .button { min-height: 54px; }
   .trust-strip { border-radius: 22px 22px 0 0; }
   .step-card, .space-card, .role-card, .post-card { border-radius: 24px; }
+  .space-card { min-height: 230px; padding: 28px; }
+  .space-card-1 { min-height: 430px; }
+  .space-card h3, .space-card:not(.space-card-1) h3 { margin-top: 36px; }
+  .space-card ul { margin-top: 30px; }
   .availability-card { border-radius: 28px; }
 }
 
