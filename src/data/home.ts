@@ -262,7 +262,7 @@ const es: HomeContent = {
     recipientPoints: [
       "Cada contenido tiene su destinatario",
       "No reciben el resto de tu Legacy",
-      "En el modo estándar no necesitan saberlo mientras estás en vida"
+      "Tú decides si avisarles ahora o cuando llegue el momento de la entrega"
     ],
     note: "La verificación y la entrega permanecen separadas por diseño."
   },
@@ -325,7 +325,7 @@ const es: HomeContent = {
       {
         question: "¿Mis destinatarios tienen que instalar la app?",
         answer:
-          "En el modo estándar, no necesitan instalar la app, crear una cuenta ni conocer su designación mientras estás en vida."
+          "No. No necesitan instalar la app. Además, tú decides si quieres informarles ahora o mantener su designación en privado hasta el momento de la entrega."
       },
       {
         question: "¿Qué ocurre si pierdo el Recovery Kit?",
@@ -515,7 +515,7 @@ const en: HomeContent = {
     recipientPoints: [
       "Each item has its recipient",
       "They do not receive the rest of your Legacy",
-      "In standard mode, they do not need to know during your lifetime"
+      "You decide whether to tell them now or when the time comes for delivery"
     ],
     note: "Verification and delivery remain separate by design."
   },
@@ -578,7 +578,7 @@ const en: HomeContent = {
       {
         question: "Do recipients need to install the app?",
         answer:
-          "In standard mode, they do not need to install the app, create an account, or know they have been selected during your lifetime."
+          "No. They do not need to install the app. You also decide whether to tell them now or keep their designation private until the time comes for delivery."
       },
       {
         question: "What happens if I lose my Recovery Kit?",

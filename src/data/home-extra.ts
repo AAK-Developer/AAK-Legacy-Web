@@ -42,7 +42,7 @@ export const fr: HomeContent = {
     guardianTitle: "Gardiens", guardianText: "Des personnes de confiance qui aident à vérifier quand le processus doit se poursuivre.",
     guardianPoints: ["Ils ne peuvent pas lire votre Legacy", "Personne ne peut décider seul", "Ils peuvent remplir leur rôle depuis le site sécurisé"],
     recipientTitle: "Destinataires", recipientText: "Les personnes qui recevront uniquement ce que vous leur avez attribué.",
-    recipientPoints: ["Chaque contenu a son destinataire", "Ils ne reçoivent pas le reste de votre Legacy", "En mode standard, ils n’ont pas besoin de le savoir de votre vivant"],
+    recipientPoints: ["Chaque contenu a son destinataire", "Ils ne reçoivent pas le reste de votre Legacy", "Vous décidez de les prévenir maintenant ou au moment de la remise"],
     note: "La vérification et la remise restent séparées par conception."
   },
   recovery: {
@@ -67,7 +67,7 @@ export const fr: HomeContent = {
     items: [
       { question: "AAK Legacy peut-il lire ce que j’enregistre ?", answer: "Non. Le contenu est chiffré sur votre appareil avant d’être stocké. AAK Legacy peut gérer l’identité de votre compte, mais ne peut pas lire le contenu de votre Legacy lorsqu’il le conserve." },
       { question: "Un gardien peut-il accéder à mes documents ?", answer: "Non. Son rôle consiste à participer à la vérification. Il n’accède pas au contenu et ne peut pas décider seul." },
-      { question: "Mes destinataires doivent-ils installer l’app ?", answer: "En mode standard, ils n’ont pas besoin d’installer l’app, de créer un compte ni de connaître leur désignation de votre vivant." },
+      { question: "Mes destinataires doivent-ils installer l’app ?", answer: "Non. Ils n’ont pas besoin d’installer l’app. Vous décidez aussi de les prévenir maintenant ou de garder leur désignation confidentielle jusqu’au moment de la remise." },
       { question: "Que se passe-t-il si je perds le Recovery Kit ?", answer: "Vos appareils autorisés peuvent encore vous donner accès. Mais si vous perdez tous ces appareils ainsi que le kit, le contenu devient cryptographiquement irrécupérable." },
       { question: "Remplace-t-il un testament ?", answer: "Non. AAK Legacy aide à organiser informations, instructions et souvenirs, mais ne remplace ni testament, ni acte notarié, ni conseil juridique." }
     ]
@@ -130,7 +130,7 @@ export const pt: HomeContent = {
   people: {
     kicker: "Pessoas e decisões", title: "Guardar não é receber.", intro: "O AAK Legacy separa duas responsabilidades que muitas vezes se confundem. Verificar um processo não dá acesso ao conteúdo.",
     guardianTitle: "Guardiões", guardianText: "Pessoas de confiança que ajudam a verificar quando o processo deve prosseguir.", guardianPoints: ["Não podem ler o seu Legacy", "Nenhum pode decidir sozinho", "Podem cumprir a sua função através da web segura"],
-    recipientTitle: "Destinatários", recipientText: "Pessoas que receberão apenas aquilo que lhes atribuiu.", recipientPoints: ["Cada conteúdo tem o seu destinatário", "Não recebem o restante Legacy", "No modo padrão, não precisam de saber durante a sua vida"],
+    recipientTitle: "Destinatários", recipientText: "Pessoas que receberão apenas aquilo que lhes atribuiu.", recipientPoints: ["Cada conteúdo tem o seu destinatário", "Não recebem o restante Legacy", "Decide se quer informá-los agora ou apenas no momento da entrega"],
     note: "A verificação e a entrega mantêm-se separadas por conceção."
   },
   recovery: {
@@ -153,7 +153,7 @@ export const pt: HomeContent = {
     items: [
       { question: "O AAK Legacy pode ler o que guardo?", answer: "Não. O conteúdo é cifrado no seu dispositivo antes de ser armazenado. O AAK Legacy pode gerir a identidade da sua conta, mas não pode ler o conteúdo do seu Legacy enquanto o guarda." },
       { question: "Um guardião pode aceder aos meus documentos?", answer: "Não. A sua função é participar na verificação. Não recebe acesso ao conteúdo e também não pode decidir sozinho." },
-      { question: "Os destinatários têm de instalar a app?", answer: "No modo padrão, não precisam de instalar a app, criar uma conta ou conhecer a sua designação durante a sua vida." },
+      { question: "Os destinatários têm de instalar a app?", answer: "Não. Não precisam de instalar a app. Também decide se quer informá-los agora ou manter a sua designação privada até ao momento da entrega." },
       { question: "O que acontece se perder o Recovery Kit?", answer: "Os dispositivos autorizados podem continuar a dar-lhe acesso. Mas, se perder todos esses dispositivos e também o kit, o conteúdo será criptograficamente irrecuperável." },
       { question: "Substitui um testamento?", answer: "Não. O AAK Legacy ajuda a organizar informação, instruções e memórias, mas não substitui um testamento, documento notarial ou aconselhamento jurídico." }
     ]
@@ -214,7 +214,7 @@ export const ca: HomeContent = {
   people: {
     kicker: "Persones i decisions", title: "Custodiar no és rebre.", intro: "AAK Legacy separa dues responsabilitats que sovint es confonen. Verificar un procés no dona accés al contingut.",
     guardianTitle: "Custodis", guardianText: "Persones de confiança que ajuden a verificar quan el procés ha de continuar.", guardianPoints: ["No poden llegir el teu Legacy", "Cap d’ells pot decidir tot sol", "Poden completar la seva funció des del web segur"],
-    recipientTitle: "Destinataris", recipientText: "Persones que rebran únicament allò que els hagis assignat.", recipientPoints: ["Cada contingut té el seu destinatari", "No reben la resta del teu Legacy", "En el mode estàndard no cal que ho sàpiguen mentre ets viu"],
+    recipientTitle: "Destinataris", recipientText: "Persones que rebran únicament allò que els hagis assignat.", recipientPoints: ["Cada contingut té el seu destinatari", "No reben la resta del teu Legacy", "Tu decideixes si els ho comuniques ara o quan arribi el moment del lliurament"],
     note: "La verificació i el lliurament es mantenen separats per disseny."
   },
   recovery: {
@@ -237,7 +237,7 @@ export const ca: HomeContent = {
     items: [
       { question: "AAK Legacy pot llegir el que hi deso?", answer: "No. El contingut es xifra al teu dispositiu abans d’emmagatzemar-se. AAK Legacy pot gestionar la identitat del teu compte, però no pot llegir el contingut del teu Legacy mentre el custodia." },
       { question: "Un custodi pot accedir als meus documents?", answer: "No. La seva funció és participar en la verificació. No rep accés al contingut i tampoc pot decidir tot sol." },
-      { question: "Els meus destinataris han d’instal·lar l’app?", answer: "En el mode estàndard, no han d’instal·lar l’app, crear un compte ni conèixer la seva designació mentre ets viu." },
+      { question: "Els meus destinataris han d’instal·lar l’app?", answer: "No. No han d’instal·lar l’app. A més, tu decideixes si els ho comuniques ara o mantens la seva designació en privat fins al moment del lliurament." },
       { question: "Què passa si perdo el Recovery Kit?", answer: "Els dispositius autoritzats et poden continuar donant accés. Però si perds tots aquests dispositius i també el kit, el contingut serà criptogràficament irrecuperable." },
       { question: "Substitueix un testament?", answer: "No. AAK Legacy ajuda a organitzar informació, instruccions i records, però no substitueix un testament, un document notarial ni assessorament jurídic." }
     ]
