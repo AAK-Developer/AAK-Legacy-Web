@@ -1232,13 +1232,8 @@ h3 { letter-spacing: -.025em; }
   .hero-grid {
     grid-template-columns: minmax(0, 1fr);
     gap: 0;
-    isolation: isolate;
   }
-  .hero-copy {
-    z-index: 2;
-    padding-bottom: 0;
-    position: relative;
-  }
+  .hero-copy { padding-bottom: 0; }
   .hero-copy > .eyebrow {
     max-width: 13ch;
     margin-bottom: 18px;
@@ -1263,18 +1258,15 @@ h3 { letter-spacing: -.025em; }
   }
   .hero-actions { gap: 10px; }
   .legacy-visual {
-    position: absolute;
-    z-index: 0;
-    top: 180px;
-    right: -18%;
+    position: relative;
     width: 100%;
     height: 660px;
-    margin: 0;
-    opacity: .2;
-    pointer-events: none;
-    filter: saturate(.78);
-    -webkit-mask-image: linear-gradient(to bottom, transparent 0, #000 12%, #000 84%, transparent 100%);
-    mask-image: linear-gradient(to bottom, transparent 0, #000 12%, #000 84%, transparent 100%);
+    margin: 44px auto 20px;
+    opacity: 1;
+    pointer-events: auto;
+    filter: drop-shadow(0 28px 60px rgba(10,99,245,.08));
+    -webkit-mask-image: none;
+    mask-image: none;
   }
   .private-preview-badge {
     right: 9px;
