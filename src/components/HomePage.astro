@@ -12,6 +12,9 @@ interface Props {
 
 const { content } = Astro.props;
 const spaces = content.spaces.items;
+const heroTitleParts = content.hero.title.split(". ").map((part, index, parts) =>
+  index < parts.length - 1 ? `${part}.` : part
+);
 const trustLabels = { es: "Principios de confianza", en: "Trust principles", fr: "Principes de confiance", pt: "Princípios de confiança", ca: "Principis de confiança" };
 const articleSlugs = featuredArticleSlugs[content.locale];
 const localizedAppAsset = (filename: string) =>
@@ -40,7 +43,11 @@ const spaceScreens = [
         <div class="container hero-grid">
           <div class="hero-copy reveal">
             <p class="eyebrow eyebrow-light">{content.hero.eyebrow}</p>
-            <h1>{content.hero.title}</h1>
+            <h1 aria-label={content.hero.title}>
+              {heroTitleParts.map((part, index) => (
+                <span>{part}{index < heroTitleParts.length - 1 ? " " : ""}</span>
+              ))}
+            </h1>
             <p class="hero-lead">{content.hero.lead}</p>
             <div class="hero-actions">
               <a class="button button-primary" href="#how">{content.hero.primary}</a>

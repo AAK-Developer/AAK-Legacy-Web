@@ -1225,3 +1225,41 @@ h3 { letter-spacing: -.025em; }
   .waitlist-form { padding: 24px 18px 22px; border-radius: 22px; }
   .waitlist-form-head { align-items: flex-start; }
 }
+
+/* Mobile hero: preserve the message while restoring hierarchy and product visibility. */
+@media (max-width: 720px) {
+  .hero { padding-top: 110px; }
+  .hero-copy { padding-bottom: 0; }
+  .hero-copy > .eyebrow {
+    max-width: 13ch;
+    margin-bottom: 18px;
+    font-size: clamp(2rem, 8.5vw, 2.3rem);
+    line-height: .98;
+    text-wrap: balance;
+  }
+  .hero-copy h1 {
+    max-width: 100%;
+    margin-bottom: 20px;
+    font-size: clamp(2.5rem, 10vw, 2.85rem);
+    line-height: .96;
+    letter-spacing: -.035em;
+    text-wrap: balance;
+  }
+  .hero-copy h1 > span { display: block; }
+  .hero-lead {
+    max-width: 37ch;
+    margin-bottom: 26px;
+    font-size: .98rem;
+    line-height: 1.5;
+  }
+  .hero-actions { gap: 10px; }
+  .legacy-visual { margin-top: 44px; }
+  .private-preview-badge {
+    right: 9px;
+    bottom: calc(9px + env(safe-area-inset-bottom));
+    padding: 5px 8px;
+    opacity: .78;
+    font-size: .52rem;
+    letter-spacing: .02em;
+  }
+}
