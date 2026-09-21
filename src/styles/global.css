@@ -1233,14 +1233,14 @@ h3 { letter-spacing: -.025em; }
   .hero-copy > .eyebrow {
     max-width: 13ch;
     margin-bottom: 18px;
-    font-size: clamp(2rem, 8.5vw, 2.3rem);
+    font-size: clamp(1.7rem, 7vw, 1.95rem);
     line-height: .98;
     text-wrap: balance;
   }
   .hero-copy h1 {
     max-width: 100%;
     margin-bottom: 20px;
-    font-size: clamp(2.5rem, 10vw, 2.85rem);
+    font-size: clamp(2.05rem, 8.5vw, 2.35rem);
     line-height: .96;
     letter-spacing: -.035em;
     text-wrap: balance;
@@ -1249,7 +1249,7 @@ h3 { letter-spacing: -.025em; }
   .hero-lead {
     max-width: 37ch;
     margin-bottom: 26px;
-    font-size: .98rem;
+    font-size: .9rem;
     line-height: 1.5;
   }
   .hero-actions { gap: 10px; }
