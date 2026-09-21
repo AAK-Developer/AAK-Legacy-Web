@@ -1229,7 +1229,16 @@ h3 { letter-spacing: -.025em; }
 /* Mobile hero: preserve the message while restoring hierarchy and product visibility. */
 @media (max-width: 720px) {
   .hero { padding-top: 110px; }
-  .hero-copy { padding-bottom: 0; }
+  .hero-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0;
+    isolation: isolate;
+  }
+  .hero-copy {
+    z-index: 2;
+    padding-bottom: 0;
+    position: relative;
+  }
   .hero-copy > .eyebrow {
     max-width: 13ch;
     margin-bottom: 18px;
@@ -1253,7 +1262,20 @@ h3 { letter-spacing: -.025em; }
     line-height: 1.5;
   }
   .hero-actions { gap: 10px; }
-  .legacy-visual { margin-top: 44px; }
+  .legacy-visual {
+    position: absolute;
+    z-index: 0;
+    top: 180px;
+    right: -18%;
+    width: 100%;
+    height: 660px;
+    margin: 0;
+    opacity: .2;
+    pointer-events: none;
+    filter: saturate(.78);
+    -webkit-mask-image: linear-gradient(to bottom, transparent 0, #000 12%, #000 84%, transparent 100%);
+    mask-image: linear-gradient(to bottom, transparent 0, #000 12%, #000 84%, transparent 100%);
+  }
   .private-preview-badge {
     right: 9px;
     bottom: calc(9px + env(safe-area-inset-bottom));
