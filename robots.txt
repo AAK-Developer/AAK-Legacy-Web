@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://aaklegacy.com/sitemap-index.xml
+Sitemap: https://akumallegacy.com/sitemap-index.xml
